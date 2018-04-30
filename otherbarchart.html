@@ -1,5 +1,8 @@
 <!DOCTYPE html>
+<html>
+<head>
 <meta charset="utf-8">
+<script src="https://d3js.org/d3.v3.min.js" charset="utf-8"></script>
 <style>
 
 .chart rect {
@@ -13,14 +16,15 @@
 }
 
 </style>
+</head>
+<body>
 <svg class="chart"></svg>
-<script src="https://d3js.org/d3.v5.min.js" charset="utf-8"></script>
 <script>
 
 var width = 960,
     barHeight = 500;
 
-var y = d3.scaleLinear()
+var y = d3.scale.linear()
     .range([height, 0]);
 
 var chart = d3.select(".chart")
@@ -55,3 +59,5 @@ function type(d) {
 }
 
 </script>
+</body>
+</html>
